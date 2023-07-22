@@ -50,6 +50,8 @@ Alcune funzionalità potrebbero essere:
 > ```implementation 'com.mapbox.search:mapbox-search-android:1.0.0-beta.43'``` <br>
 > ```implementation 'com.google.android.gms:play-services-location:21.0.1'``` <br>
 
+## Screenshot
+<a href="https://www.youtube.com/watch?v=YDX7GfcmV-c"><img title="AskiProject - Screenshot" src="https://github.com/Slenderman0039/Aski-Project/blob/main/Screenshot.png" height="500"/></a>
 
 ## Video
 [![](https://markdown-videos.vercel.app/youtube/YDX7GfcmV-c)](https://www.youtube.com/watch?v=YDX7GfcmV-c)
