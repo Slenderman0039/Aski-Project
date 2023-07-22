@@ -52,5 +52,5 @@ Alcune funzionalità potrebbero essere:
 
 
 ## Video
-[![](https://markdown-videos.vercel.app/youtube/YDX7GfcmV-c)]([https://youtu.be/dQw4w9WgXcQ](https://www.youtube.com/watch?v=YDX7GfcmV-c)https://www.youtube.com/watch?v=YDX7GfcmV-c)
+[![](https://markdown-videos.vercel.app/youtube/YDX7GfcmV-c)](https://www.youtube.com/watch?v=YDX7GfcmV-c)
 
