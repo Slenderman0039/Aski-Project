@@ -1,4 +1,4 @@
-# SPVM Project
+# Aski Project
 
 __Project Name:__ Aski Project <br>
 __Project type:__ Web and Mobile Programming <br>
