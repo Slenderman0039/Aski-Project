@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.navbar.owncar.addcar.addCar"
+    android:background="#F4FCFE">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/configurazione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIGURAZIONE"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:fontFamily="@font/oswald_semibold"
+            />
+
+
+        <ImageView
+            android:id="@+id/immagine"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/configurazione"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/car" />
+
+
+
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:id="@+id/specifiche_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/titillium_web"
+        android:text="Configura la tua auto!"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/immagine"
+        app:layout_constraintRight_toRightOf="@+id/immagine"
+        app:layout_constraintBottom_toBottomOf="@+id/immagine" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/rounded_button_lr"
+        app:layout_constraintTop_toBottomOf="@+id/specifiche_description">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/brandbox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread">
+
+            <LinearLayout
+                android:id="@+id/step1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_steps"
+                android:backgroundTint="#1D1E20">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/White"
+                    android:padding="10dp"
+                    android:src="@drawable/car_icon_white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step2"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_steps"
+                android:backgroundTint="#1D1E20">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/White"
+                    android:padding="10dp"
+                    android:src="@drawable/pencil_white_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step3"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_steps"
+                android:backgroundTint="#1D1E20">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/White"
+                    android:padding="10dp"
+                    android:src="@drawable/clock_white_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step4"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_steps"
+                android:backgroundTint="#1D1E20">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/White"
+                    android:padding="10dp"
+                    android:src="@drawable/drop_white_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--inizio-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/brandbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_buttons">
+
+            <ImageView
+                android:id="@+id/brand_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/car_icon_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/Black" />
+
+            <TextView
+                android:id="@+id/brand_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Brand:"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/brand_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Brand"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/brand_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/brand_text" />
+
+
+            <!-- due -->
+            <ImageView
+                android:id="@+id/modello_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/car_icon_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brand_img"
+                app:tint="@color/Black" />
+
+            <TextView
+                android:id="@+id/modello_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Modello:"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/modello_img"
+                app:layout_constraintTop_toBottomOf="@+id/brand_img" />
+
+            <TextView
+                android:id="@+id/modello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Modello"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/modello_text"
+                app:layout_constraintStart_toStartOf="@+id/brand"
+                app:layout_constraintTop_toTopOf="@+id/modello_img" />
+
+            <!-- tre -->
+
+            <ImageView
+                android:id="@+id/targa_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/pencil_white_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modello_img"
+                app:tint="@color/Black" />
+
+            <TextView
+                android:id="@+id/targa_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Targa:"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/targa_img"
+                app:layout_constraintTop_toBottomOf="@+id/modello_img" />
+
+            <TextView
+                android:id="@+id/targa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Targa"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/targa_text"
+                app:layout_constraintStart_toStartOf="@+id/modello"
+                app:layout_constraintTop_toTopOf="@+id/targa_img" />
+
+            <!--quattro-->
+
+            <ImageView
+                android:id="@+id/immatricolazione_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/clock_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/targa_img"
+                app:tint="@color/Black" />
+
+            <TextView
+                android:id="@+id/immatricolazione_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Imm.:"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/immatricolazione_img"
+                app:layout_constraintTop_toBottomOf="@+id/targa_img" />
+
+            <TextView
+                android:id="@+id/anno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Anno"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/immatricolazione_text"
+                app:layout_constraintStart_toStartOf="@+id/targa"
+                app:layout_constraintTop_toTopOf="@+id/immatricolazione_img" />
+
+            <!--quinto-->
+
+            <ImageView
+                android:id="@+id/carburante_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/drop_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/immatricolazione_img"
+                app:tint="@color/Black" />
+
+            <TextView
+                android:id="@+id/carburante_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Carbu.:"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/carburante_img"
+                app:layout_constraintTop_toBottomOf="@+id/immatricolazione_img" />
+
+            <TextView
+                android:id="@+id/carburante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Carburante"
+                android:textSize="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/carburante_text"
+                app:layout_constraintStart_toStartOf="@+id/anno"
+                app:layout_constraintTop_toTopOf="@+id/carburante_img" />
+
+            <Button
+                android:id="@+id/conferma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/Green"
+                android:text="CONFERMA"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carburante_img" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--fine-->
+</androidx.constraintlayout.widget.ConstraintLayout>

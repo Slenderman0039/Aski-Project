@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/account"
+        android:title="@string/sliding_navbar_account"
+        android:icon="@drawable/user_map_icon"
+        />
+    <item
+        android:id="@+id/own_car"
+        android:title="@string/sliding_navbar_own_car"
+        android:icon="@drawable/car_icon"
+        />
+    <item
+        android:icon="@drawable/card_icon_small"
+        android:id="@+id/payment_method"
+        android:title="@string/sliding_navbar_method" />
+
+    <item
+        android:id="@+id/reservations"
+        android:icon="@drawable/cronologia_icon"
+        android:title="@string/sliding_navbar_reservations" />
+    <item
+        android:id="@+id/guide"
+        android:icon="@drawable/info_icon"
+        android:title="@string/sliding_navbar_info" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout_icon"
+        android:title="@string/sliding_navbar_exit" />
+</menu>

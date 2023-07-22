@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.LoginRegistration"
+    android:background="@color/white">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            >
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/img_login_register"/>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_registration_title"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:fontFamily="@font/montserrat_bold"/>
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_registration_subtitle"
+                android:textColor="#000000"
+                android:alpha="0.6"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_medium"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registrati"
+                android:layout_marginTop="35dp"
+                android:letterSpacing="0.15"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrati"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/login_registration_button"
+                />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="oppure"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:alpha="0.6"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_medium"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/autenticati"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.15"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AUTENTICATI"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:background="@drawable/login_registration_button"
+                />
+        </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

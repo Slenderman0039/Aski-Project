@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.registration.sone_registration_fragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_indirizzo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Indirizzo: [Via],[numero]"
+            android:maxHeight="20dp"
+            app:boxCornerRadiusBottomEnd="17dp"
+            app:boxCornerRadiusTopEnd="17dp"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundColor="@color/White"
+            app:boxCornerRadiusBottomStart="17dp"
+            app:boxCornerRadiusTopStart="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/home_icon"
+            app:startIconTint="@color/Black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_registration"
+                android:inputType="textAutoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_cap"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CAP"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="17dp"
+            app:boxCornerRadiusTopEnd="17dp"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundColor="@color/White"
+            app:boxCornerRadiusBottomStart="17dp"
+            app:boxCornerRadiusTopStart="17dp"
+            android:maxHeight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/pin_icon_cap"
+            app:startIconTint="@color/Black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cap_registration"
+                android:layout_width="match_parent"
+                android:maxLength="5"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_city"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Città"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="17dp"
+            app:boxCornerRadiusTopEnd="17dp"
+            app:boxStrokeWidth="0dp"
+            app:boxBackgroundColor="@color/White"
+            app:boxCornerRadiusBottomStart="17dp"
+            app:boxCornerRadiusTopStart="17dp"
+            android:maxHeight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/point_icon"
+            app:startIconTint="@color/Black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city_registration"
+                android:inputType="textAutoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:backgroundTint="@color/SeaGreen"
+            android:background="@drawable/rounded">
+
+            <TextView
+                android:textColor="@color/White"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/swipe_both"
+                android:textSize="13dp"
+                android:fontFamily="@font/montserrat_bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

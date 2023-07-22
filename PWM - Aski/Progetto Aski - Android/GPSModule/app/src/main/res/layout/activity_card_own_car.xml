@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:padding="5dp" />
+        <TextView
+            android:id="@+id/marcamodello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img"
+            android:text="{Marca - Modello}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/carburante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/marcamodello"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/img"
+            android:drawablePadding="2dp"
+            android:text="Carburante: {carburante}" />
+        <TextView
+            android:id="@+id/targa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/carburante"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/img"
+            android:drawablePadding="2dp"
+            android:text="Targa: {targa}" />
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/targa"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/img"
+            android:drawablePadding="2dp"
+            android:text="Valutazione: {n/5}" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_toEndOf="@id/img"
+            android:layout_below="@id/rating">
+            <Button
+                android:id="@+id/avaible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFFLINE"
+                android:backgroundTint="#007bff"/>
+            <LinearLayout
+                android:id="@+id/cancella"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:gravity="center"
+                android:backgroundTint="@color/Red"
+                android:background="@drawable/delete_auto_button"
+                android:orientation="vertical">
+                <ImageView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/delete_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Aski</string>
+    <string name="mapbox_public_key"></string>
+    <string name="motto_1">Affitta Noleggia</string>
+    <string name="motto_2">Subito!</string>
+    <string name="login_registration_title">Benvenuto su Aski</string>
+    <string name="login_registration_subtitle">Abbiamo bisogno di sapere chi sei.\nRegistrati subito oppure accedi,\nbastano pochi semplici passi.</string>
+    <string name="map_credito">Il tuo credito corrente è di {money}€</string>
+    <string name="map_gps_not_avaible">Attiva il GPS</string>
+    <string name="map_position_kilometers">Auto più vicina</string>
+    <string name="map_position_kilometers_failed">Auto vicine a {Location}!</string>
+
+    <string name="login_title">Autenticazione</string>
+    <string name="login_subtitle">Autenticati nel nostro sistema Aski.</string>
+    <string name="login_comeback_registration">&lt;&lt; Torna al modulo di registrazione</string>
+    <string name="swipe_left">&lt;&lt; Swipe</string>
+    <string name="swipe_right">Swipe &gt;&gt;</string>
+    <string name="swipe_both">&lt;&lt;  Swipe  &gt;&gt;</string>
+    <string name="swipe_complete">Conferma  &gt;&gt;</string>
+
+    <!--NAVBAR MENU HEADER-->
+    <string name="sliding_navbar_title">Bentornato\n{Utente}</string>
+
+    <!--NAVBAR MENU TEXT-->
+    <string name="sliding_navbar_account">Profilo</string>
+    <string name="sliding_navbar_own_car">Le tue auto</string>
+    <string name="sliding_navbar_money">Credito</string>
+    <string name="sliding_navbar_method">Pagamento</string>
+    <string name="sliding_navbar_reservations">Riepilogo</string>
+    <string name="sliding_navbar_info">Guida</string>
+    <string name="sliding_navbar_exit">Esci</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--guida-->
+    <string name="manuale_description">In questa sezione viene presentato il manuale-guida per l\'utente. La pagina è suddivisa in sottosezioni che, rappresentano tutte le funzionalità principali fornite dalla piattaforma Aski.</string>
+    <string name="registrazione_description">La registrazione utente è suddivisa in tre step. Ogni step richiede informazioni diverse da compilare mediante l\'utilizzo di form (insieme di campi), questi verranno validati ed elaborati dal sistema qual ora corretti. L\'applicazione fa uso dello strumento \'swipe destro\' e \'swipe sinistro\' per la gestione del movimento tra le schermate. Una volta compilati tutti i campi, verrà messa a disposizione una griglia di resoconto e verifica che unifica i campi immessi nei tre step. Una volta confermato, la registrazione avvrà successo. Sarà possibile navigare avanti e indietro tra glii step mantendendo comunque i dati memorizzati.</string>
+    <string name="autenticazione_description">L\'autenticazione utente è stata schematizzata seguendo il canonico approccio composto da Indirizzo Email e Password. Anche questo form prevede un controllo da parte del sistema e se questo avrà esito positivo allora l\'autenticazione verrà eseguita con successo, altrimenti verrà mostrata una schermata di errore. Viene ad ogni modo garantito all\'utente la possibilità di tornare al modulo di registrazione mediante swipe, se necessario. Il sistema elabora e salva la sessione fino all\'operazione di \'Logout\' richiesta dall\'utente.</string>
+    <string name="askimap_description">Uno dei ruoli più importanti della piattaforma Aski viene proprio dall\'AskiMap. Questa è dotata di un\'interfaccia semplice che segna sulla mappa le automobili presenti in modalità \'sharing\'. Gli indicatori rosso e verde all\'esterno del logo automobilistico ne individuano l\'appartenenza o no all\'utente che sta navigando nell\'app, quindi vedremo in rosso tutti quei loghi che fanno riferimento ad auto che posseggo, mentre in verde quelle di altri utenti e che disponibili ad essere prenotate. L\'AskiMap presenta dei pulsanti ben visibili sullo schermo, che riassumono le diciture \'Navigazione\',\'Filtro\' e \'Visuale\'. </string>
+    <string name="askimap_description1">Il pulsante \'Navigazione\' consente di visualizzare sul lato sinistro della schermata una lista di navigazione, in cui sono presenti le sezioni \'Profilo\', \'La tua auto\'\, \'Pagamento\', \'Riepilogo\'\, \'Guida\'\ ed \'Esci\'\ (analizzate nelle sezioni successive).</string>
+    <string name="askimap_description2">Il pulsante \'Filtro\' invece permette di impostare la visualizzazione delle automobili applicando dei vincoli epsressi in termini di km (inizialmente impostato ad 1.0 km) o in termini di brand automobilistico. E\' comunque presente la funzionalità per rimuoverli tutti indistintamente attraverso il bottone sottostante.</string>
+    <string name="askimap_description3">Il pulsante \'Visuale\' mette a dispozione dell\'utente un punto di vista differente all\'interno della mappa per facilitare il riconoscimento del punto in cui si trova.</string>
+    <string name="askimap_description4">Una volta selezionata l\'automobile verrà visualizzato il modello del veicolo e la distanza tra l\'utente e l\'automobile epsressa in km. Le automobili disponibili potranno essere selezionate e successivamente prenotate. Oppure sarà possibile creare un percorso automatico dal punto in cui si trova l\'utente fino al punto in cui si trova il veicolo utilizzando il bottone \'percorso\'.</string>
+    <string name="askimap_description5">Infine troviamo le shortcut visibili solo durante il periodo di prenotazione, in cui sarà possibile chiamare automaticamente il proprietario del veicolo (pulsante blu) o disdire la prenotazione (pulsante rosso). Al termine del percorso sarà possibile lasciare una valutazione alla vettura in questione.</string>
+    <string name="profilo_description">La sezione di navigazione a sinistra presenta una sottosezione denominata \'Profilo\', questa mostrerà tutte le informazioni utente, includendo la possibilità di cambiare solamente tutti quei campi che terminano con il marcatore \'>\', il sistema provvederà ad aggiornare le informazioni appena modificate. </string>
+    <string name="letueauto_description">La sezione di navigazione a sinistra presenta una sottosezione denominata \'Le tue auto\', questa mostrerà tutte le tue auto in possesso. Qual ora la lista fosse vuota, sarà possibile aggiurne una nuova mediante il pulsante in basso delineato con \'+\', questo aprirà il configuratore e seguendo gli step passo dopo passo, il veicolo verrà completato e solo dopo confermato.</string>
+    <string name="letueauto_description1">Il configuratore presenta quattro sezioni: inserimento del brand e modello del veicolo, inserimento della targa del veicolo, inserimento dell\'anno di immatricolazione del veicolo e infine l\'inserimento del tipo di carburante. I campi validati saranno mostrati direttamente sulla tabella posta in basso. Una volta completata la configurazione, il tasto conferma elaborerà le informazioni e inserirà una nuova auto all\'interno della sottosezione \'Le tue auto\'. E\' doveroso premettere che l\'inserimento di una nuova auto preveda che l\'utente sia già disposto sulla propria auto per memorizzarne la posizione.</string>
+    <string name="letueauto_description2">Se la lista dei veicoli ne presenta almeno uno, saranno disponibili le funzioni per mettere \'Online\' oppure \'Offline\' il veicolo, in modo da potere rendere disponibile la tua auto al noleggio di terzi. Viene inoltre concessa la possibilità di cancellare definitvamente il veicolo dalla lista dei veicoli.</string>
+    <string name="pagamento_description">La sezione di navigazione a sinistra presenta una sottosezione denominata \'Pagamento\', questa consente di inserire una nuova carta qual ora non ve ne fossero ed eventualmente impostarla come metodo di pagamento predefinito. Tuttavia l\'app Aski presenta un conto proprietario digitale in-app che consente di avere un metodo di pagamento del tutto separato con un credito dedicato solo alle transazioni dell\'app, per sfruttarlo basta semplicemente inserire una carta valida e solo dopo utilizzare il pulsante \'Ricarica il tuo conto aski\', questo ti farà selezionare la carta precedentemente immmessa con il corrispettivo CVV e taglio di ricarica. E\'concesso un massimo di sole due carte di credito, è ovviamente concessa la rimozione delle carte semplicemente selezionandole e cliccando il pulsante rosso \'Rimuovi\'.</string>
+    <string name="riepilogo_description">La sezione di navigazione a sinistra presenta una sottosezione denominata \'Riepilogo\', questa consente di visualizzare lo storico settimanale mensile o annuale delle spese effettuate in-app, includendo la possibilità di visualizzazione su grafico delle spese.</string>
+    <string name="esci_description">La sezione di navigazione a sinistra presenta una sottosezione denominata \'Esci\', questa consente di uscire dal proprio account qual ora necessario ed effettuare una nuova autenticazione.</string>
+    <string name="prenotazione_description">La schermata di prenotazione prevede non solo il resoconto dell\'auto selezionata, ma anche la possbilità di inserire periodi di prenotazione validi cioè in cui il veicolo è disponibile. A seguito della validazione da parte del sistema, una volta inserite le informazioni di prenotazione e di pagamento, l\'auto viene riservata all\'utente per il periodo di tempo selezionato.</string>
+    <string name="errori_description">Errori di validazione: sono tutti errori che hanno a che fare con la validità o no del singolo form che si sta utilizzando.\n\nErrore generico client: \'Non sei connesso ad Internet!\' Il dispositivo non è connesso ad internet e non può interfacciarsi con il sistema, verifcare quindi connessione e/o gps.\n\nErrore generico server: \'Errore connessione al server!\' Il server non risponde ed è quindi doveroso aspettare l\'assistenza tecnica da parte degli operatori.</string>
+    <string name="fine_description">AskiApp v.1.0.0\n\nAlessandro Macaluso - Antonio Spedito\n\nDeveloped in 2023\nProgrammazione Web e Mobile\nUniversità degli Studi di Palermo.</string>
+
+</resources>
+
+

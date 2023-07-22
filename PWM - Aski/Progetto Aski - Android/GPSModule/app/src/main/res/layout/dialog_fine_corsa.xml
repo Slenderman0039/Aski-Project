@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/icon_aski"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="TERMINATO"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/Black"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+ />
+
+    <TextView
+        android:id="@+id/inizio_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="INIZIO"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
+    <TextView
+        android:id="@+id/inizio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="INIZIO CORSA"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
+    <TextView
+        android:id="@+id/fine_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/inizio_t"
+        android:fontFamily="@font/poppins_bold"
+        android:text="FINE"
+        app:layout_constraintTop_toBottomOf="@+id/inizio_t"
+        />
+    <TextView
+        android:id="@+id/fine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="FINE CORSA"
+        app:layout_constraintRight_toRightOf="@+id/inizio"
+        app:layout_constraintTop_toBottomOf="@+id/inizio"
+        />
+
+    <TextView
+        android:id="@+id/totale_t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/inizio_t"
+        android:fontFamily="@font/poppins_bold"
+        android:text="TOTALE"
+        app:layout_constraintTop_toBottomOf="@+id/fine_t"
+        />
+
+    <LinearLayout
+        android:id="@+id/totale_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/rounded_steps"
+        android:backgroundTint="@color/Red"
+        android:fontFamily="@font/poppins_regular"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="@+id/fine"
+        app:layout_constraintTop_toBottomOf="@+id/fine">
+    <TextView
+        android:id="@+id/totale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="COSTO"
+        android:textColor="@color/White"
+        app:layout_constraintRight_toRightOf="@+id/fine"
+        app:layout_constraintTop_toBottomOf="@+id/fine"
+        />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/totale_box"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="18dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="RECENSIONE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/Black"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        />
+
+    <TextView
+        android:id="@+id/proprietario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="40dp"
+        android:text="Lascia una recensione al proprietario del veicolo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+    <RatingBar
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proprietario"
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

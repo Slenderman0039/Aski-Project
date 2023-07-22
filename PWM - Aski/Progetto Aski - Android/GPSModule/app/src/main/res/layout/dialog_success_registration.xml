@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Registrazione avvenuta con successo!"
+        android:id="@+id/successo"
+         />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/success" />
+
+</LinearLayout>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1EF"
+    tools:context=".map.booking.book.BookingActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/cardview"
+      android:layout_width="wrap_content"
+      android:layout_height="330dp"
+      android:background="@drawable/rounded_button_lr"
+      android:paddingRight="30dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/datiprenotazione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="DATI PRENOTAZIONE"
+        android:textColor="@color/Black"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Giorno"
+        app:layout_constraintLeft_toLeftOf="@+id/datiprenotazione"
+        app:layout_constraintTop_toBottomOf="@+id/datiprenotazione"
+        app:startIconDrawable="@drawable/booking_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/inizio"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="date"
+          android:maxLength="10"
+          android:nextFocusForward="@+id/time" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldTime"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outlinedTextField"
+        app:layout_constraintTop_toBottomOf="@+id/datiprenotazione"
+        app:startIconDrawable="@drawable/clock_time_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/time"
+          android:focusable="false"
+          android:text="Ore"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="date"
+          android:maxLength="10"
+          android:nextFocusForward="@+id/slot" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldFine"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Fine"
+        app:layout_constraintLeft_toLeftOf="@+id/outlinedTextField"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+        app:startIconDrawable="@drawable/scadenza_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/fine"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:enabled="true"
+          android:inputType="date"
+          android:maxLength="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldSlot"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/outlinedTextFieldFine"
+        app:layout_constraintRight_toRightOf="@+id/outlinedTextFieldTime"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+        app:startIconDrawable="@drawable/clock_time_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/slot"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="date"
+          android:text="Ore"
+          android:maxLength="10"
+          android:focusable="false"
+          android:nextFocusForward="@+id/cvv" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/metodotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="METODO DI PAGAMENTO"
+        android:textColor="@color/Black"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldSlot" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldcard"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Carta"
+        app:layout_constraintLeft_toLeftOf="@+id/metodotext"
+        app:layout_constraintTop_toBottomOf="@+id/metodotext"
+        app:startIconDrawable="@drawable/card_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/card"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:enabled="false"
+          android:inputType="date"
+          android:maxLength="10" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextFieldTimecvv"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="CVV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/outlinedTextFieldcard"
+        app:layout_constraintTop_toBottomOf="@+id/metodotext"
+        app:startIconDrawable="@drawable/cvv_icon">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/cvv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="numberSigned"
+          android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout"
+      android:layout_width="wrap_content"
+      android:layout_height="330dp"
+      android:layout_marginHorizontal="30dp"
+      android:background="@drawable/rounded_button_lr"
+      android:paddingRight="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/cardview"
+      app:layout_constraintTop_toTopOf="@+id/cardview">
+
+    <TextView
+        android:id="@+id/autosel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="AUTO SELEZIONATA"
+        android:textColor="@color/Black"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_propr"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/user_icon_black"
+        app:layout_constraintLeft_toLeftOf="@+id/autosel"
+        app:layout_constraintTop_toBottomOf="@+id/autosel" />
+
+    <TextView
+        android:id="@+id/prop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Proprietario:"
+        app:layout_constraintEnd_toStartOf="@+id/proprietario"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/img_propr"
+        app:layout_constraintTop_toBottomOf="@+id/autosel" />
+
+    <TextView
+        android:id="@+id/proprietario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="proprietario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/prop_text"
+        app:layout_constraintTop_toTopOf="@+id/prop_text" />
+
+    <!-- secondo -->
+
+    <ImageView
+        android:id="@+id/brandmodello_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/car_icon_white"
+        app:layout_constraintLeft_toLeftOf="@+id/autosel"
+        app:layout_constraintTop_toBottomOf="@+id/img_propr"
+        app:tint="@color/Black" />
+
+    <TextView
+        android:id="@+id/brandmodello_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Veicolo:"
+        app:layout_constraintEnd_toStartOf="@+id/brandmodello"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/brandmodello_img"
+        app:layout_constraintTop_toBottomOf="@+id/img_propr" />
+
+    <TextView
+        android:id="@+id/brandmodello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="veicolo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/brandmodello_text"
+        app:layout_constraintTop_toTopOf="@+id/brandmodello_text" />
+
+    <!-- terzo -->
+
+    <ImageView
+        android:id="@+id/carburante_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/drop_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/autosel"
+        app:layout_constraintTop_toBottomOf="@+id/brandmodello_img"
+        app:tint="@color/Black" />
+
+    <TextView
+        android:id="@+id/carburante_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Carburante:"
+        app:layout_constraintEnd_toStartOf="@+id/carburante"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/carburante_img"
+        app:layout_constraintTop_toBottomOf="@+id/brandmodello_img" />
+
+    <TextView
+        android:id="@+id/carburante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="carburante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/carburante_text"
+        app:layout_constraintTop_toTopOf="@+id/carburante_text" />
+
+    <!-- quarto -->
+
+    <ImageView
+        android:id="@+id/recensioni_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/recensioni_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/autosel"
+        app:layout_constraintTop_toBottomOf="@+id/carburante_img"
+        app:tint="@color/Black" />
+
+    <TextView
+        android:id="@+id/recensioni_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Recensioni:"
+        app:layout_constraintEnd_toStartOf="@+id/recensioni"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/recensioni_img"
+        app:layout_constraintTop_toBottomOf="@+id/carburante_img" />
+
+    <TextView
+        android:id="@+id/recensioni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="/5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recensioni_text"
+        app:layout_constraintTop_toTopOf="@+id/recensioni_text" />
+
+
+    <TextView
+        android:id="@+id/resoconto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="RESOCONTO SPESE"
+        android:textColor="@color/Black"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recensioni" />
+
+    <!-- primo -->
+
+    <ImageView
+        android:id="@+id/prezzoh_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/clock_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/resoconto"
+        app:layout_constraintTop_toBottomOf="@+id/resoconto"
+        app:tint="@color/Black" />
+
+    <TextView
+        android:id="@+id/prezzoh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Prezzo/h:"
+        app:layout_constraintEnd_toStartOf="@+id/prezzoh"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/prezzoh_img"
+        app:layout_constraintTop_toBottomOf="@+id/resoconto" />
+
+    <TextView
+        android:id="@+id/prezzoh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="5€/h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/prezzoh_text"
+        app:layout_constraintTop_toTopOf="@+id/prezzoh_text" />
+
+    <!--secondo-->
+
+    <ImageView
+        android:id="@+id/totale_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/money_icon"
+        app:layout_constraintLeft_toLeftOf="@+id/resoconto"
+        app:layout_constraintTop_toBottomOf="@+id/prezzoh_img"
+        app:tint="@color/Black" />
+
+    <TextView
+        android:id="@+id/totale_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Totale:"
+        app:layout_constraintEnd_toStartOf="@+id/totale"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/totale_img"
+        app:layout_constraintTop_toBottomOf="@+id/prezzoh_img" />
+
+    <LinearLayout
+        android:id="@+id/totale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_steps"
+        android:backgroundTint="@color/Blue"
+        android:fontFamily="@font/poppins_regular"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totale_text"
+        app:layout_constraintTop_toTopOf="@+id/totale_text">
+
+      <TextView
+          android:id="@+id/prezzoeuro"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:layout_marginHorizontal="15dp"
+          android:fontFamily="@font/montserrat_bold"
+          android:text="0€"
+          android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/conferma_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_steps"
+        android:backgroundTint="@color/Green"
+        android:fontFamily="@font/poppins_regular"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totale_text">
+
+      <TextView
+          android:id="@+id/conferma"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:layout_marginHorizontal="15dp"
+          android:fontFamily="@font/montserrat_bold"
+          android:text="CONFERMA"
+          android:textColor="@color/white" />
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

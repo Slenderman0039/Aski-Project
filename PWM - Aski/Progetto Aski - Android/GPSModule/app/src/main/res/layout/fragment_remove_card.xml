@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".map.navbar.payment.fragments.RemoveCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:text="DATI CARTA:"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/layout_card"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="N. carta"
+                    android:maxHeight="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:boxCornerRadiusBottomEnd="17dp"
+                    app:boxCornerRadiusTopEnd="17dp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxBackgroundColor="#d9d9d9"
+                    app:boxCornerRadiusBottomStart="17dp"
+                    app:boxCornerRadiusTopStart="17dp"
+                    app:startIconDrawable="@drawable/card_icon"
+                    app:startIconTint="@color/Black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:inputType="numberSigned"
+                        android:id="@+id/carta"
+                        android:maxLength="19"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="30dp">
+                <Button
+                    android:id="@+id/rimuovi"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="RIMUOVI"
+                    android:backgroundTint="@color/Red"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/predefinita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Predefinita"
+                        android:backgroundTint="@color/Green"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</FrameLayout>

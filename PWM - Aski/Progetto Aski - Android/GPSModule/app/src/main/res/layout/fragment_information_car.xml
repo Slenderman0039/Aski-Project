@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_steps"
+    android:backgroundTint="@color/White"
+    android:paddingBottom="20dp"
+    tools:context=".map.booking.information_car">
+
+    <ImageView
+        android:id="@+id/brand"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/brand_fiat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintEnd_toStartOf="@+id/box"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/brand" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/brandmodello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="BRAND - MODELLO"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prezzo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PREZZO"
+            app:layout_constraintLeft_toLeftOf="@+id/brandmodello"
+            app:layout_constraintStart_toStartOf="@+id/brandmodello"
+            app:layout_constraintTop_toBottomOf="@+id/brandmodello" />
+
+        <LinearLayout
+            android:id="@+id/layout_prezzo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_steps"
+            android:backgroundTint="@color/Green"
+            android:orientation="vertical"
+            app:layout_constraintRight_toRightOf="@+id/brandmodello"
+            app:layout_constraintStart_toEndOf="@+id/prezzo"
+            app:layout_constraintTop_toBottomOf="@+id/brandmodello">
+
+            <TextView
+                android:id="@+id/prezzoeuro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="euro€/h"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prenota"
+            android:layout_width="150dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/Black"
+            android:fontFamily="@font/montserrat_bold"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/prezzo"
+            app:layout_constraintRight_toRightOf="@+id/layout_prezzo"
+            app:layout_constraintStart_toStartOf="@+id/prezzo"
+            app:layout_constraintTop_toBottomOf="@+id/prezzo">
+
+            <TextView
+                android:id="@+id/prenota_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="PRENOTA"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    <TextView
+        android:id="@+id/titleveicolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/brandmodello"
+        app:layout_constraintTop_toBottomOf="@+id/prezzo" />
+
+    <LinearLayout
+        android:id="@+id/desc_propr"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_steps"
+        android:fontFamily="@font/montserrat_bold"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/desc_carb"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleveicolo">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/nome_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/desc_carb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_steps"
+        android:fontFamily="@font/montserrat_bold"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/desc_year"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/desc_propr"
+        app:layout_constraintTop_toBottomOf="@id/titleveicolo">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/drop_fill" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/desc_year"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_steps"
+        android:fontFamily="@font/montserrat_bold"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/desc_carb"
+        app:layout_constraintTop_toBottomOf="@id/titleveicolo">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/imm_icon" />
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/prezzo_layout"
+    android:layout_width="130dp"
+    android:layout_height="30dp"
+    app:layout_constraintHorizontal_bias="0.1"
+    app:layout_constraintStart_toStartOf="@+id/brand"
+    app:layout_constraintTop_toBottomOf="@id/desc_propr"
+    android:layout_marginTop="40dp"
+    android:background="@drawable/rounded_steps"
+    android:backgroundTint="@color/Blue"
+    android:gravity="center"
+    app:layout_constraintBottom_toBottomOf="parent">
+    <TextView
+        android:id="@+id/prezzo"
+        android:textSize="20dp"
+        android:textColor="@color/White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="15€/h"
+      />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottone_prenota"
+        android:layout_width="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/brandmodello"
+        android:backgroundTint="@color/Black"
+        android:background="@drawable/rounded_steps"
+        android:fontFamily="@font/montserrat_bold"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/prezzo_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc_year">
+
+       <TextView
+           android:textColor="@color/White"
+           android:gravity="center"
+           android:fontFamily="@font/montserrat_bold"
+           android:text="PRENOTA ORA"
+           android:layout_height="match_parent"
+           android:layout_width="match_parent"
+           />
+
+    </LinearLayout>
+-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

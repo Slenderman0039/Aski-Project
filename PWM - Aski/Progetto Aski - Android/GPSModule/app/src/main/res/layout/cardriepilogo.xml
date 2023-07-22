@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@drawable/rounded_button_lr">
+
+
+    <TextView
+        android:id="@+id/noleggio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="AUTO NOLEGGIATA"
+        app:layout_constraintBottom_toTopOf="@+id/box"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="PAGAMENTO"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+        app:layout_constraintLeft_toLeftOf="@+id/noleggio"
+        app:layout_constraintTop_toBottomOf="@+id/noleggio">
+
+        <ImageView
+            android:id="@+id/targa_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pencil_white_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/car_icon" />
+
+        <TextView
+            android:id="@+id/prezzo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="PREZZO TOTALE"
+            app:layout_constraintLeft_toRightOf="@+id/prezzo_icon"
+            app:layout_constraintTop_toTopOf="@+id/prezzo_icon" />
+
+        <ImageView
+            android:id="@+id/prezzo_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/money_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/targa_icon" />
+
+        <ImageView
+            android:id="@+id/car_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/car_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/targa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="TARGA"
+            app:layout_constraintLeft_toRightOf="@+id/targa_icon"
+            app:layout_constraintTop_toTopOf="@+id/targa_icon"
+
+            />
+
+        <TextView
+            android:id="@+id/auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="AUTO"
+            app:layout_constraintLeft_toRightOf="@+id/car_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+        app:layout_constraintRight_toRightOf="@+id/pagamento"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento">
+
+        <ImageView
+            android:id="@+id/card_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/card_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="CARTA"
+            app:layout_constraintRight_toLeftOf="@+id/card_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/inizio_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/booking_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintRight_toRightOf="@+id/card_icon"
+            app:layout_constraintTop_toBottomOf="@+id/card_icon" />
+
+        <TextView
+            android:id="@+id/inizio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="DATA INIZIO"
+            app:layout_constraintRight_toLeftOf="@+id/inizio_icon"
+            app:layout_constraintTop_toTopOf="@+id/inizio_icon" />
+
+        <ImageView
+            android:id="@+id/fine_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/scadenza_icon"
+            android:backgroundTint="@color/Black"
+            app:layout_constraintRight_toRightOf="@+id/inizio_icon"
+            app:layout_constraintTop_toBottomOf="@+id/inizio_icon" />
+
+        <TextView
+            android:id="@+id/fine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="DATA FINE"
+            app:layout_constraintRight_toLeftOf="@+id/fine_icon"
+            app:layout_constraintTop_toTopOf="@+id/fine_icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/stato_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="STATO:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/totale"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/boxstato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_steps"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/poppins_regular"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/stato_title"
+            app:layout_constraintTop_toTopOf="@+id/stato_title">
+
+            <TextView
+                android:id="@+id/stato"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="PROGRAMMATO"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
