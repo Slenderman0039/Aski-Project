@@ -145,7 +145,7 @@ CREATE TABLE `Utenti` (
 
 LOCK TABLES `Utenti` WRITE;
 /*!40000 ALTER TABLE `Utenti` DISABLE KEYS */;
-INSERT INTO `Utenti` VALUES (1,'','','',,'','','320333567','','',),(2,'','','',,'','','','','',),(,'','','',,'','','','','',);
+INSERT INTO `Utenti` VALUES (1,'','','',,'','','','','',),(2,'','','',,'','','','','',),(,'','','',,'','','','','',);
 /*!40000 ALTER TABLE `Utenti` ENABLE KEYS */;
 UNLOCK TABLES;
 
