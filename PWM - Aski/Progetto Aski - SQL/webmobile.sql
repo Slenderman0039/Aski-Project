@@ -61,7 +61,7 @@ CREATE TABLE `Notifiche` (
 
 LOCK TABLES `Notifiche` WRITE;
 /*!40000 ALTER TABLE `Notifiche` DISABLE KEYS */;
-INSERT INTO `Notifiche` VALUES (1,'dvwwkR9ZTS-9DpIgH8axu-:APA91bGU4aeTbqzgWNBYqSwVyd0cQTf5wBkQVVH2K_23GxOFdXRHHiCqWBm98Th6ULynZPKjhD6YPr4Lz88xiaJzuVL6MPWlu9MOsDROiAlB8AJSaP_5WW5sY5qmxKz3TmntPuWq6N7f'),(2,'djF6RQueTKqIQ8QVlb_ihF:APA91bGLXR-Q1E_FM70MEQLwKVogxcwOupMTdEcfnvW4n34WaDzs1NhGQm7A_LQA0fjFd25m_uVnkAt_7x7YEBCaOdajJRPVSKPDG-pmK68X_ECPXJWO0UUb-lTbPqXw7G2S-9C3MoUu'),(3,'djF6RQueTKqIQ8QVlb_ihF:APA91bGLXR-Q1E_FM70MEQLwKVogxcwOupMTdEcfnvW4n34WaDzs1NhGQm7A_LQA0fjFd25m_uVnkAt_7x7YEBCaOdajJRPVSKPDG-pmK68X_ECPXJWO0UUb-lTbPqXw7G2S-9C3MoUu');
+INSERT INTO `Notifiche` VALUES (1,''),(2,''),(3,'');
 /*!40000 ALTER TABLE `Notifiche` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +145,7 @@ CREATE TABLE `Utenti` (
 
 LOCK TABLES `Utenti` WRITE;
 /*!40000 ALTER TABLE `Utenti` DISABLE KEYS */;
-INSERT INTO `Utenti` VALUES (1,'Antonio','Spedito','Via Elia Crisafulli,2',90128,'Palermo','antonio.spedito@community.unipa.it','320333567','Antonietto01','2001-03-04',500),(2,'Alessandro','Macaluso','Corso dei Mille,1060',90123,'Palermo','macaluso01@outlook.it','3203556593','AleMaca','2002-03-02',700),(3,'Federico','Concone','Corso delle Scienze, 5',90128,'Palermo','federico.concone@gmail.com','0000000000','federico.concone','1988-07-06',10000);
+INSERT INTO `Utenti` VALUES (1,'','','',,'','','320333567','','',),(2,'','','',,'','','','','',),(,'','','',,'','','','','',);
 /*!40000 ALTER TABLE `Utenti` ENABLE KEYS */;
 UNLOCK TABLES;
 
